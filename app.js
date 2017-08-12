@@ -1,5 +1,5 @@
 
-var app = angular.module('myApp', ['ngRoute']);
+var app = angular.module('landmarkModule', ['ngRoute']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
