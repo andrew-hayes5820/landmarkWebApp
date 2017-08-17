@@ -1,3 +1,5 @@
+// stores current location
+
 var app = angular.module('landmarkModule');
 
 app.factory('LocationFactory', function(){

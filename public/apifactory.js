@@ -1,3 +1,5 @@
+// handles http requests
+
 var app = angular.module('landmarkModule');
 
 app.factory('APIFactory', function($http){
