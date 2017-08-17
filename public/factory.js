@@ -3,7 +3,7 @@ var app = angular.module('landmarkModule');
 app.factory('Factory', function($http){
 	var locationData;
 	var key = "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw";
-	
+
 	return {
 		getLocationData: getLocationData
 	}
@@ -21,11 +21,11 @@ app.factory('Factory', function($http){
 		return $http.get(url)
 			.then(function(result){
 				console.log(result);
-				locationData = result
+				locationData = result.data.results;
 				return locationData;
 			}).catch(function(e) {
 				console.log("ERROR", e);
 			});
-	
+
 	}
-}); 
+});
