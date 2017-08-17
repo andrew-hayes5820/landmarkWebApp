@@ -1,6 +1,6 @@
 var app = angular.module('landmarkModule');
 
-app.factory('Factory', function($http){
+app.factory('APIFactory', function($http){
 	var locationData;
 	var key = "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw";
 	
@@ -10,7 +10,7 @@ app.factory('Factory', function($http){
 
 	function getLocationData(location){
 		location = location || '-33.8670,151.1957';
-		var baseUrl = `api-places?location=${location}&radius=50000&types=landmarks`;
+		var baseUrl = `api-places?location=${location}&radius=50000&types=zoo`;
 		var url = `${baseUrl}&key=${key}`;
 		if (locationData){
 			//if we already have data return this.
