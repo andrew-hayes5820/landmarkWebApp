@@ -1,14 +1,11 @@
 var app = angular.module('landmarkModule');
 
 
-app.controller('MapController', function($scope, $timeout, Factory){
-
-    Factory.getLocationData()
-    .then(function(result){
-      $timeout($scope.locationData = result);
-    })
-    .catch(function(error){
-      $scope.error = 'There was an error getting landmarks';
+app.controller('MapController', function($scope, $timeout, APIFactory, LocationFactory){
+    var location = LocationFactory.getLocationCoordinates();
+    $scope.mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${location}&zoom=13&size=300x300&sensor=false`;
+    APIFactory.getLocationData(location).then(function(result){
+        console.log(result);
+         $timeout($scope.locationData = result);
     });
-
 });
