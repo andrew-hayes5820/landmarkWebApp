@@ -13,9 +13,25 @@ app.get('/', function(req, res){
 	res.sendFile(`${__dirname}/public/index.html`);
 });
 
-//proxy for google maps
+//proxy for google places
 app.get('/api-places', function(req, res){
 	var baseUrl = "https://maps.googleapis.com/maps/api/place/nearbysearch/json"
+	var url = req.url.replace(req.path, baseUrl);
+	request(url, function(err, response, body){
+		if(err){
+			return res.json(err);
+		}
+
+		if(body) {
+			body = JSON.parse(body);
+		}
+
+		res.json(body);
+	});
+});
+
+app.get('/api-details', function(req, res){
+	var baseUrl = "https://maps.googleapis.com/maps/api/place/details/json"
 	var url = req.url.replace(req.path, baseUrl);
 	request(url, function(err, response, body){
 		if(err){

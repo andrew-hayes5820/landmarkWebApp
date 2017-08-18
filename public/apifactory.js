@@ -22,12 +22,22 @@ app.factory('APIFactory', function($http){
 	//if we don't have data, use http service to get data from reddit.
 		return $http.get(url)
 			.then(function(result){
-				console.log(result);
-				locationData = result.data.results;
+				var promises = [];
+
+				result.data.results.forEach(function(item){
+					promises.push(getDetails(item.place_id));
+				});
+
+				return Promise.all(promises);
+			}).then(function(data){
+				locationData = data.map(function(item){
+					return item.data.result;
+				});
 				return locationData;
-			}).catch(function(e) {
-				console.log("ERROR", e);
 			});
 
+		function getDetails(placeId){
+			return $http.get(`api-details?key=${key}&placeid=${placeId}`);
+		}
 	}
 });
