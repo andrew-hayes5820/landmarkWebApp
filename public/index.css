@@ -1,26 +1,40 @@
-body{
+/* body{
     margin: 0;
     padding: 0;
-}
+    } */
+#navBar{
+    text-align: center;
+    width: 75%;
+    font-size: 20px;
+    }
+#navLink{
+    text-decoration: none;
+    color: black;
+    }
 
 p{
     margin: 0;
+    }
+#mapPage{
+    margin: auto;
 }
 #locationMap{
     float:left;
-}
-
+    }
 #resultList{
     font-size: 16px;
-    height: 70px;
-}
+    height: 65px;
+    margin: auto;
+    padding: 0;
+    width: 30%;
+    }
 #clearList{
     clear: left;
-}
-
+    }
 #locationIcon{
     float:left;
     margin: 0;
+    padding: 0;
     height:50px;
     width:auto;
-}
+    }

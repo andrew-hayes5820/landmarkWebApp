@@ -1,21 +1,21 @@
 <!-- <h1>Map View</h1> -->
+<div id="mapPage">
+        <div id="locationMap">
+        <img src="{{mapUrl}}">
+        </div>
 
-<div id="locationMap">
-<img src="{{mapUrl}}">
+        <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8'>
+                <img id="locationIcon" src = '{{location.icon}}'/>
+                <p>{{location.name}} {{location.formatted_phone_number}}</p>
+                <p>{{location.formatted_address}}</p>
+                <!-- <p>{{location.opening_hours.open_now}}</p> -->
+                <!-- <p>{{location.weekday_text}}</p> -->
+                <hr />
+
+        </section>
+
+        <p id="clearList"></p>
+
 </div>
-
-<section id="resultList" ng-repeat = 'location in locationData | limitTo: 8'>
-        <img id="locationIcon" src = '{{location.icon}}'/>
-        <p>{{location.name}} {{location.formatted_phone_number}}</p>
-        <p>{{location.formatted_address}}</p>
-        <!-- <p>{{location.opening_hours.open_now}}</p> -->
-        <!-- <p>{{location.weekday_text}}</p> -->
-        <hr />
-
-</section>
-
-<p id="clearList"></p>
-
-
 
 <div ng-if='error'>Error getting information</div>
