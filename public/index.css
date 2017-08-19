@@ -9,10 +9,11 @@ body{
 
 #paragraphMainPage{
     background-color:#C2C8E4;
-    width: 400px;
+    width: 445px;
     margin:0 auto;
+    font-size:18px;
+    font-style:sans-serif;
 }
-
 #navBar{
     text-align: center;
     }
@@ -20,7 +21,11 @@ body{
     text-decoration: none;
     color: black;
     font-size: 24px;
-}    
+    padding-right: 10px;
+} 
+#navLink:hover{
+    color: blue;
+}
 #homePageLogo
 {
     height: 200px;
@@ -46,9 +51,12 @@ p{
     font-size: 16px;
     height: 65px;
     margin: auto;
-    padding-left: 7.5%;
     text-align: left;
     }
+#resultFormatting{
+    background-color:#C2C8E4;
+    /* width: 750px; */
+}
 #locationIcon{
     float:left;
     margin: 0;

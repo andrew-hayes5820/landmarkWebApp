@@ -6,8 +6,8 @@
 
         <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8'>
                 <img id="locationIcon" src = '{{location.icon}}'/>
-                <p>{{location.name}} {{location.formatted_phone_number}}</p>
-                <p>{{location.formatted_address}}</p>
+                <p id="resultFormatting">{{location.name}} {{location.formatted_phone_number}}</p>
+                <p id="resultFormatting">{{location.formatted_address}}</p>
                 <!-- <p>{{location.opening_hours.open_now}}</p> -->
                 <!-- <p>{{location.weekday_text}}</p> -->
                 <hr />
