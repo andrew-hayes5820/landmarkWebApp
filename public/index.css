@@ -43,6 +43,9 @@ p{
     padding-left: 7.5%;
     padding-right:7.5%;
 }
+#otherPageLogo{
+    height:75px;
+}
 #locationMap{
     float:left;
     padding-right:7.5%;
