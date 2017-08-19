@@ -4,7 +4,7 @@
         <img src="{{mapUrl}}">
         </div>
 
-        <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8'>
+        <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8' ng-click='selectPlace(location)'>
                 <img id="locationIcon" src = '{{location.icon}}'/>
                 <p>{{location.name}} {{location.formatted_phone_number}}</p>
                 <p>{{location.formatted_address}}</p>
