@@ -51,7 +51,6 @@ app.factory('APIFactory', function($http){
 
 		return $http.get(url)
 			.then(function(result){
-				console.log("results from userLocation()");
 				console.log(result.data.results[0].geometry.location);
 
 				return result.data.results[0].geometry.location; //path to be determined

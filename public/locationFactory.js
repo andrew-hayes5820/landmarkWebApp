@@ -12,7 +12,6 @@ app.factory('LocationFactory', function(APIFactory){
     }
 
     function getLocationCoordinates() {
-      
         if(latitude && longitude){
             return `${latitude},${longitude}`;
         }
@@ -36,9 +35,10 @@ app.factory('LocationFactory', function(APIFactory){
     }
 
     function getInputAddress(location){
-        APIFactory.userLocation(location).then(function(response){
-            latitude = response.latitude;
-            longitude = response.longitude;
+
+      return  APIFactory.userLocation(location).then(function(response){
+            latitude = response.lat;
+            longitude = response.lng;
         });
     }
 
