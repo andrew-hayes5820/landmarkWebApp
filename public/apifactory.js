@@ -63,7 +63,7 @@ app.factory('APIFactory', function($http){
 
 function userLocation(location){
 		var addressInput = location || "4820+Williamson+Dearborn+MI";
-
+		addressInput = encodeURIComponent(addressInput);
 		var url =  `api-map?address=${addressInput}&key=${apiMapsKey}`;
 
 
