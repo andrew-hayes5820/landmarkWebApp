@@ -5,7 +5,9 @@ var app = angular.module('landmarkModule');
 app.factory('APIFactory', function($http){
 
 	var locationData;
-	var apiPlacesKey = "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
+	var apiPlacesKey = "AIzaSyAQhESmOdlt_4NxVRerzsGt5hlN8DHBJIg";
+
+	//Drew's key "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
 	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
 
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
@@ -20,7 +22,7 @@ app.factory('APIFactory', function($http){
 
 	function getLocationData(location){
 		console.log(location);
-		location = location || '-33.8670,151.1957';
+		location = location || "-33.8670, 151.1957";
 		var baseUrl = `api-places?location=${location}&radius=50000&types=zoo`;
 		var url = `${baseUrl}&key=${apiPlacesKey}`;
 		console.log(url);
@@ -53,7 +55,7 @@ app.factory('APIFactory', function($http){
 	function getDetails(placeId){
 		return $http.get(`api-details?key=${apiPlacesKey}&placeid=${placeId}`);
 	}
-	
+
 
 	function getPhotos(photoReference){
 		return $http.get(`api-photos?key=${apiPlacesKey}&photoreference=${photoReference}&maxwidth=300`);
