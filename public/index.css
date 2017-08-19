@@ -9,10 +9,8 @@ body{
 
 #paragraphMainPage{
     background-color:#C2C8E4;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 400px;
+    margin:0 auto;
 }
 
 #navBar{
@@ -49,6 +47,7 @@ p{
     height: 65px;
     margin: auto;
     padding-left: 7.5%;
+    text-align: left;
     }
 #locationIcon{
     float:left;
