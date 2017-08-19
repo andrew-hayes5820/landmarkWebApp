@@ -6,23 +6,37 @@ body{
     background-size: 100%;
     background-repeat: no-repeat;
     }
+
+#paragraphMainPage{
+    background-color:#C2C8E4;
+    align-content: center;
+    width: 400px;
+}
+
 #navBar{
     text-align: center;
-    font-size: 18pxpx;
     }
 #navLink{
     text-decoration: none;
     color: black;
+    font-size: 24px;
 }    
-#mainLogo{
-    height: 100px;
+#homePageLogo
+{
+    height: 200px;
 }
+#locationButton{
+ font-size: 24px;
+ border-radius: 10px;
+}
+
 p{
     margin: 0;
     }
 #mapPage{
     margin: auto;
-    padding-left: 15%;
+    padding-left: 7.5%;
+    padding-right:7.5%;
 }
 #locationMap{
     float:left;
@@ -32,7 +46,6 @@ p{
     height: 65px;
     margin: auto;
     padding: 0;
-    width: 45%;
     }
 #locationIcon{
     float:left;
