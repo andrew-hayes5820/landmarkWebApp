@@ -2,21 +2,27 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    background-image:url("images/test101.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     }
 #navBar{
     text-align: center;
-    font-size: 20px;
+    font-size: 18pxpx;
     }
 #navLink{
     text-decoration: none;
     color: black;
-    }
-
+}    
+#mainLogo{
+    height: 100px;
+}
 p{
     margin: 0;
     }
 #mapPage{
     margin: auto;
+    padding-left: 15%;
 }
 #locationMap{
     float:left;
@@ -26,10 +32,7 @@ p{
     height: 65px;
     margin: auto;
     padding: 0;
-    width: 30%;
-    }
-#clearList{
-    clear: left;
+    width: 45%;
     }
 #locationIcon{
     float:left;
