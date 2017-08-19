@@ -5,10 +5,7 @@
 </div>
 
 <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8'>
-
         <img id="locationIcon" src = '{{location.icon}}'/>
-        <p></p>
-        <p></p>
         <p>{{location.name}} {{location.formatted_phone_number}}</p>
         <p>{{location.formatted_address}}</p>
         <!-- <p>{{location.opening_hours.open_now}}</p> -->
