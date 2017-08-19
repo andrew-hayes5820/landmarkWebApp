@@ -40,7 +40,7 @@ app.factory('APIFactory', function($http){
 			});
 
 		function getDetails(placeId){
-			return $http.get(`api-details?key=${key}&placeid=${placeId}`);
+			return $http.get(`api-details?key=${apiPlacesKey}&placeid=${placeId}`);
 		}
 	}
 
@@ -49,7 +49,6 @@ app.factory('APIFactory', function($http){
 		var url =  `api-map?address=${addressInput}&key=${apiMapsKey}`;
 
 
-	//if we don't have data, use http service to get data from reddit.
 		return $http.get(url)
 			.then(function(result){
 				console.log(result);
