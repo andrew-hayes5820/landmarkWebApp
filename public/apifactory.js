@@ -6,7 +6,8 @@ app.factory('APIFactory', function($http){
 
 	var locationData;
 	var apiPlacesKey = "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
-	// var apiPlacesKey = "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw";
+	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
+
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
 
 	return {
@@ -63,9 +64,9 @@ app.factory('APIFactory', function($http){
 
 		return $http.get(url)
 			.then(function(result){
-				console.log(result);
-				 
-				return result.results.geometry.location; //path to be determined
+				console.log(result.data.results[0].geometry.location);
+
+				return result.data.results[0].geometry.location; //path to be determined
 			}).catch(function(e) {
 				console.log("ERROR", e);
 			});

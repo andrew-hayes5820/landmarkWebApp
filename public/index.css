@@ -1,35 +1,53 @@
-/* body{
-    margin: 0;
-    padding: 0;
-    } */
+body{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-image:url("images/test101.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    }
+
+#paragraphMainPage{
+    background-color:#C2C8E4;
+    width: 400px;
+    margin:0 auto;
+}
+
 #navBar{
     text-align: center;
-    width: 75%;
-    font-size: 20px;
     }
 #navLink{
     text-decoration: none;
     color: black;
-    }
+    font-size: 24px;
+}    
+#homePageLogo
+{
+    height: 200px;
+}
+#locationButton{
+ font-size: 24px;
+ border-radius: 10px;
+}
 
 p{
     margin: 0;
     }
 #mapPage{
     margin: auto;
+    padding-left: 7.5%;
+    padding-right:7.5%;
 }
 #locationMap{
     float:left;
+    padding-right:7.5%;
     }
 #resultList{
     font-size: 16px;
     height: 65px;
     margin: auto;
-    padding: 0;
-    width: 30%;
-    }
-#clearList{
-    clear: left;
+    padding-left: 7.5%;
+    text-align: left;
     }
 #locationIcon{
     float:left;

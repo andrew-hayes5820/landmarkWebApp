@@ -6,8 +6,7 @@ app.controller('HomeController', function($scope, $location, $timeout, LocationF
 
 		if ($scope.input) {
 			LocationFactory.getInputAddress($scope.input)
-				.then(function(result){
-					console.log(result);
+				.then(function(){
 					$timeout($location.path('/map'));
 				})
 				.catch(function(err){

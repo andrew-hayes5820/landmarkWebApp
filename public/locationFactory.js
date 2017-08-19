@@ -10,15 +10,15 @@ app.factory('LocationFactory', function(APIFactory){
         getLocationCoordinates: getLocationCoordinates,
         getInputAddress: getInputAddress
     }
-    
-    function getLocationCoordinates () {
+
+    function getLocationCoordinates() {
         if(latitude && longitude){
             return `${latitude},${longitude}`;
         }
     }
-    
+
     function getGeoLocation(){
-        
+
         return new Promise(function(resolve, reject){
             function success(position) {
                 latitude  = position.coords.latitude;
@@ -35,11 +35,12 @@ app.factory('LocationFactory', function(APIFactory){
     }
 
     function getInputAddress(location){
-        APIFactory.userLocation(location).then(function(response){
-            latitude = response.latitude;
-            longitude = response.longitude;
+
+      return  APIFactory.userLocation(location).then(function(response){
+            latitude = response.lat;
+            longitude = response.lng;
         });
     }
-	
-	
-}); 
+
+
+});
