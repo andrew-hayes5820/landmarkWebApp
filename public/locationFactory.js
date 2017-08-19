@@ -18,7 +18,8 @@ app.factory('LocationFactory', function(APIFactory){
     }
 
     function getGeoLocation(){
-
+        APIFactory.clearLocationData();
+        
         return new Promise(function(resolve, reject){
             function success(position) {
                 latitude  = position.coords.latitude;
@@ -35,10 +36,13 @@ app.factory('LocationFactory', function(APIFactory){
     }
 
     function getInputAddress(location){
+        APIFactory.clearLocationData();
 
       return  APIFactory.userLocation(location).then(function(response){
             latitude = response.lat;
             longitude = response.lng;
+            console.log("getInputAddress");
+            console.log(latitude, longitude);
         });
     }
 

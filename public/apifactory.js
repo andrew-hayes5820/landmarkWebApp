@@ -7,17 +7,23 @@ app.factory('APIFactory', function($http){
 	var locationData;
 	var apiPlacesKey = "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
 	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
+
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
 
 	return {
 		getLocationData: getLocationData,
-		userLocation: userLocation
+		userLocation: userLocation,
+		clearLocationData: clearLocationData,
+		userLocation: userLocation,
+		getPhotos: getPhotos
 	}
 
 	function getLocationData(location){
+		console.log(location);
 		location = location || '-33.8670,151.1957';
 		var baseUrl = `api-places?location=${location}&radius=50000&types=zoo`;
 		var url = `${baseUrl}&key=${apiPlacesKey}`;
+		console.log(url);
 		if (locationData){
 			//if we already have data return this.
 			return Promise.resolve(locationData); // Promise.resolve is a keyword that turns any data into a
@@ -34,19 +40,28 @@ app.factory('APIFactory', function($http){
 
 				return Promise.all(promises);
 			}).then(function(data){
+				console.log(data);
 				locationData = data.map(function(item){
 					return item.data.result;
 				});
 				return locationData;
 			});
 
-		function getDetails(placeId){
-			return $http.get(`api-details?key=${apiPlacesKey}&placeid=${placeId}`);
-		}
+
 	}
 
-		function userLocation(location){
+	function getDetails(placeId){
+		return $http.get(`api-details?key=${apiPlacesKey}&placeid=${placeId}`);
+	}
+	
+
+	function getPhotos(photoReference){
+		return $http.get(`api-photos?key=${apiPlacesKey}&photoreference=${photoReference}&maxwidth=300`);
+	}
+
+function userLocation(location){
 		var addressInput = location || "4820+Williamson+Dearborn+MI";
+
 		var url =  `api-map?address=${addressInput}&key=${apiMapsKey}`;
 
 
@@ -60,4 +75,8 @@ app.factory('APIFactory', function($http){
 			});
 
 	}
+function clearLocationData(){
+	locationData = null;
+}
+
 });
