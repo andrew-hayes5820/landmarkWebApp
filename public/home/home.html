@@ -1,11 +1,20 @@
 <!-- <h1>Landmark Application Homepage.</h1> -->
 
 <p>
+    <img id="homePageLogo" src="images/landmark-logo.png" alt="">
     <section>
-        <input ng-model="input" type="text" name="Address" placeholder="Address">
+         <p id = "paragraphMainPage">
+            <b>Please enter the desired location. </b>
+        </p>
+        <p id = "paragraphMainPage">
+            <b>Or, click 'Show my location' to use your current location.</b>
+        </p>
+        <br><br>
+        <input ng-model="input" type="text" name="Address" placeholder="Please enter the Full Address" 
+        style="width:500px;font-size:24pt;text-align:center;">
     </section>
     <br>
-    <button ng-click="getGeoLocation()">
+    <button id="locationButton" ng-click="getGeoLocation()">
           Show my location
     </button>
 </p>
