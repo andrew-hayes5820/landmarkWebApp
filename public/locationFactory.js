@@ -2,12 +2,13 @@
 
 var app = angular.module('landmarkModule');
 
-app.factory('LocationFactory', function(){
+app.factory('LocationFactory', function(APIFactory){
     var latitude;
     var longitude;
 	return {
         getGeoLocation: getGeoLocation,
         getLocationCoordinates: getLocationCoordinates,
+        getInputAddress: getInputAddress
     }
     
     function getLocationCoordinates () {
@@ -31,7 +32,14 @@ app.factory('LocationFactory', function(){
 
         });
 
-    };
+    }
+
+    function getInputAddress(location){
+        APIFactory.userLocation(location).then(function(response){
+            latitude = response.latitude;
+            longitude = response.longitude;
+        });
+    }
 	
 	
 }); 
