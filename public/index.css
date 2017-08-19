@@ -40,12 +40,13 @@ p{
 }
 #locationMap{
     float:left;
+    padding-right:7.5%;
     }
 #resultList{
     font-size: 16px;
     height: 65px;
     margin: auto;
-    padding: 0;
+    padding-left: 7.5%;
     }
 #locationIcon{
     float:left;
