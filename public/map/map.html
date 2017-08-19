@@ -6,11 +6,13 @@
 
 
 <section ng-repeat = 'location in locationData | limitTo: 10'>
-<p>{{location.geometry.location}}</p>
+
 <img src = '{{location.icon}}'/>
-<p>{{location.id}}</p>
 <p>{{location.name}}</p>
+<p>{{location.formatted_address}}</p>
+<p>{{location.formatted_phone_number}}</p>
 <p>{{location.opening_hours.open_now}}</p>
+<p>{{location.weekday_text}}</p>
 
 <hr />
 
