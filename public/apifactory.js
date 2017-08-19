@@ -11,7 +11,8 @@ app.factory('APIFactory', function($http){
 
 	return {
 		getLocationData: getLocationData,
-		userLocation: userLocation
+		userLocation: userLocation,
+		clearLocationData: clearLocationData
 	}
 
 	function getLocationData(location){
@@ -45,8 +46,9 @@ app.factory('APIFactory', function($http){
 		}
 	}
 
-		function userLocation(location){
+function userLocation(location){
 		var addressInput = location || "4820+Williamson+Dearborn+MI";
+
 		var url =  `api-map?address=${addressInput}&key=${apiMapsKey}`;
 
 
@@ -60,4 +62,8 @@ app.factory('APIFactory', function($http){
 			});
 
 	}
+function clearLocationData(){
+	locationData = null;
+}
+
 });
