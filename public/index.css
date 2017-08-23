@@ -14,16 +14,24 @@ body{
     font-size:18px;
     font-style:sans-serif;
 }
-#navBar{
+.active{
     text-align: center;
-    }
-#navLink{
+    color:#149186;
+    font-size: 26px;
+    padding-right: 10px;
+    
+} 
+.active:hover{
+    color: blue;
+}   
+.navLink{
+    text-align: center;
     text-decoration: none;
     color: black;
     font-size: 24px;
     padding-right: 10px;
 } 
-#navLink:hover{
+.navLink:hover{
     color: blue;
 }
 #homePageLogo
