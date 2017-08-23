@@ -1,8 +1,8 @@
 var app = angular.module('landmarkModule');
 
 
-app.controller('MapController', function($scope, $timeout, $location, APIFactory, LocationFactory, PlacesFactory){
-    var location = LocationFactory.getLocationCoordinates();
+app.controller('MapController', function($scope, $timeout, $location, $routeParams, APIFactory, LocationFactory, PlacesFactory){
+    var location = $routeParams.location;
     $scope.mapUrl = `https://maps.googleapis.com/maps/api/staticmap?center=${location}&zoom=9&size=500x500&sensor=false`;
 
     APIFactory.getLocationData(location).then(function(result){
