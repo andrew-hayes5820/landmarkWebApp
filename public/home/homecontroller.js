@@ -62,12 +62,13 @@ app.controller('HomeController', function($scope, $location, $interpolate, $time
 			alert("Select a place you'd like to visit.");
 		}
 
-	LocationFactory.getGeoLocation()
+		LocationFactory.getGeoLocation()
 			.then(function(){
 				$scope.location = LocationFactory.getLocationCoordinates();
 			})
 			.then(function(){
 				var url = $interpolate('/map/{{location}}/{{type}}')($scope);
+				console.log(url);
 				$location.path(url);
 			})
 			.catch(function(err){

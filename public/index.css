@@ -46,7 +46,7 @@ section {
     font-family: sans-serif;
 }
 
-#locationButton{
+.locationButton{
  font-size: 24pt;
  border-radius: 10px;
  background-color: #F26522;
