@@ -2,13 +2,12 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    background-image:url("images/test101.jpg");
+    background-image:url("images/backgroundMK2.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     }
 
 #paragraphMainPage{
-    background-color:#C2C8E4;
     width: 445px;
     margin:0 auto;
     font-size:18px;
@@ -53,10 +52,11 @@ p{
 }
 #otherPageLogo{
     height:75px;
+    align-content: center;
 }
 #locationMap{
     float:left;
-    padding-right:7.5%;
+    padding-right:10%;
     }
 #resultList{
     font-size: 16px;
@@ -64,10 +64,6 @@ p{
     margin: auto;
     text-align: left;
     }
-#resultFormatting{
-    background-color:#C2C8E4;
-    /* width: 750px; */
-}
 #locationIcon{
     float:left;
     margin: 0;

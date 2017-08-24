@@ -2,7 +2,7 @@
 <nav>
                 <a class="navLink" href="#home">Home</a>
                 <a class="active" href="#map">Map</a>
-                <a class="navLink" href="#directions">Directions</a>
+                
 </nav>
 <img id="otherPageLogo"src="../images/landmark-logo.png" alt="NO IMAGE TO LOAD">
 <div id="mapPage">
@@ -10,9 +10,10 @@
         <img src="{{mapUrl}}">
         </div>
         <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8' ng-click='selectPlace(location)'>
-                <img id="locationIcon" src = '{{location.icon}}'/>
-                <p id="resultFormatting">{{location.name}} {{location.formatted_phone_number}}</p>
-                <p id="resultFormatting">{{location.formatted_address}}</p>
+                <!-- <img id="locationIcon" src = '{{location.icon}}'/> -->
+                <p><strong>{{location.name}}</strong></p>
+                <p>{{location.formatted_phone_number}}</p>
+                <p>{{location.formatted_address}}</p>
                 <!-- <p>{{location.opening_hours.open_now}}</p> -->
                 <!-- <p>{{location.weekday_text}}</p> -->
                 <hr />

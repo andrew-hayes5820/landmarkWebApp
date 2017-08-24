@@ -6,7 +6,7 @@
     <section>
       <form>
 
-      
+
           <input ng-model ="aquarium" type="radio" name="type" value="aquarium" checked="checked"> Aquariums
           <br />
           <input ng-model ="museum" type="radio" name="type" value="museum"> Museums
@@ -24,15 +24,14 @@
             <b>Please enter the desired location. </b>
         </p>
         <p id = "paragraphMainPage">
-            <b>Or, click 'Show my location' to use your current location.</b>
+            <b>Or, click 'Use my location'</b>
         </p>
       <br></br>
         <input ng-model="input" type="text" name="Address" placeholder="Find Landmarks near this Address"
         style="width:500px;font-size:24pt;text-align:center;">
-
     </section>
     <br>
     <button id="locationButton" ng-click="getGeoLocation()">
-          Show my location
+          Use my location
     </button>
 </p>
