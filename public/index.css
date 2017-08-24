@@ -42,10 +42,27 @@ font-style:sans-serif;
 {
     height: 175px;
 }
-#locationButton{
- font-size: 24px;
- border-radius: 10px;
+section {
+    font-family: sans-serif;
 }
+
+#locationButton{
+ font-size: 24pt;
+ border-radius: 10px;
+ background-color: #F26522;
+ padding: 10px 17px;
+ border-style: none;
+ margin: 10px;
+}
+
+ #addressInput {
+    width: 500px;
+    border-radius: 5px;
+    font-size: 24pt;
+    text-align: center;
+    border: solid 3px #F26522;
+    padding: 2px;
+ }
 
 p{
     margin: 0;

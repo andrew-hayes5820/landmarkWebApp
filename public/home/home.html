@@ -19,19 +19,13 @@
 
 
     </form>
-    <br>
-       <p id = "paragraphMainPage">
-            <b>Please enter the desired location. </b>
-        </p>
-        <p id = "paragraphMainPage">
-            <b>Or, click 'Use my location'</b>
-        </p>
       <br>
         <input ng-model="input" type="text" name="Address" placeholder="Find Landmarks near this Address"
-        style="width:500px;font-size:24pt;text-align:center;">
+        id="addressInput" >
+        <button id="locationButton" ng-click="getGeoLocation()">
+              Get Landmarks
+        </button>
     </section>
-    <br>
-    <button id="locationButton" ng-click="getGeoLocation()">
-          Use my location
-    </button>
+    
+    <button id="locationButton" ng-click="getMyGeoLocation()">Get Landmarks Near Me</button>
 </p>
