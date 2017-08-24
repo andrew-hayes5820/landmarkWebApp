@@ -17,9 +17,9 @@ app.factory('LocationFactory', function(APIFactory){
         }
     }
 
-    function getGeoLocation(){
+    function getGeoLocation(type){
         APIFactory.clearLocationData();
-        
+
         return new Promise(function(resolve, reject){
             function success(position) {
                 latitude  = position.coords.latitude;

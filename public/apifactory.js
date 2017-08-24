@@ -20,10 +20,10 @@ app.factory('APIFactory', function($http){
 		getPhotos: getPhotos
 	}
 
-	function getLocationData(location){
+	function getLocationData(location, type){
 		console.log(location);
 		location = location || "-33.8670, 151.1957";
-		var baseUrl = `api-places?location=${location}&radius=50000&types=zoo`;
+		var baseUrl = `api-places?location=${location}&radius=50000&types=${type}`;
 		var url = `${baseUrl}&key=${apiPlacesKey}`;
 		console.log(url);
 		if (locationData){

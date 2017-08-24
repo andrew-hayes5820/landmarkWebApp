@@ -8,7 +8,7 @@ app.config(function($routeProvider, $locationProvider) {
        controller: 'HomeController',
     })
 
-    .when('/map/:location',{
+    .when('/map/:location/:type',{
        templateUrl: 'map/map.html',
        controller: 'MapController',
     })
