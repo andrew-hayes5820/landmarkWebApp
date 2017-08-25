@@ -5,9 +5,9 @@ var app = angular.module('landmarkModule');
 app.factory('APIFactory', function($http){
 
 	var locationData;
-	var apiPlacesKey = "AIzaSyAQhESmOdlt_4NxVRerzsGt5hlN8DHBJIg";
+	// var apiPlacesKey = "AIzaSyAQhESmOdlt_4NxVRerzsGt5hlN8DHBJIg";
 
-	//Drew's key "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
+	var apiPlacesKey =  "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
 	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
 
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
@@ -56,9 +56,8 @@ app.factory('APIFactory', function($http){
 		return $http.get(`api-details?key=${apiPlacesKey}&placeid=${placeId}`);
 	}
 
-
 	function getPhotos(photoReference){
-		return $http.get(`api-photos?key=${apiPlacesKey}&photoreference=${photoReference}&maxwidth=300`);
+		return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${photoReference}&key=${apiPlacesKey}`;
 	}
 
 function userLocation(location){

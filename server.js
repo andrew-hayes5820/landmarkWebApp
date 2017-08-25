@@ -62,17 +62,6 @@ app.get('/api-details', function(req, res){
 	});
 });
 
-app.get('/api-photos', function(req, res){
-	var baseUrl = "https://maps.googleapis.com/maps/api/place/photo"
-	var url = req.url.replace(req.path, baseUrl);
-	request(url, function(err, response, body){
-		if(err){
-			return res.json(err);
-		}
-
-		res.send(response);
-	});
-});
 
 app.listen(port, function(){
 	console.log('listening on localhost:8080');

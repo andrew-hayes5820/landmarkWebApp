@@ -13,10 +13,10 @@ app.factory('PlacesFactory', function(APIFactory){
 
     function getSelectedPlace(){
         var photoReference = selectedPlace.photos[0].photo_reference;
-        return APIFactory.getPhotos(photoReference).then(function(result){
-            selectedPlace.photo = result.data.body
-            return selectedPlace;
-        });
+        var imageUrl = APIFactory.getPhotos(photoReference);
+        selectedPlace.imageUrl = imageUrl;
+        return selectedPlace;
+        
     }
 
 	

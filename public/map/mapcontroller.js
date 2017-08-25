@@ -11,9 +11,9 @@ app.controller('MapController', function($scope, $timeout, $location, $routePara
          $timeout($scope.locationData = result);
     });
 
-    $scope.selectPlace = function(place){
+    $scope.savePlace = function(place){
         PlacesFactory.saveSelectedPlace(place);
-        $timeout($location.path('/directions'));
+        $timeout(function(){$location.path('/directions')});
     }
 
 });

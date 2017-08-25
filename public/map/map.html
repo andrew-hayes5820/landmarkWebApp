@@ -10,16 +10,18 @@
         <div id="locationMap">
         <img src="{{mapUrl}}">
         </div>
-        <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8' ng-click='selectPlace(location)'>
-                <!-- <img id="locationIcon" src = '{{location.icon}}'/> -->
-                <p><strong>{{location.name}}</strong></p>
-                <p>{{location.formatted_phone_number}}</p>
+
+        <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8' ng-click='savePlace(location)'>
+                <img id="locationIcon" src = '{{location.icon}}'/>
+                <p><strong>{{location.name}}</strong> {{location.formatted_phone_number}}</p>
                 <p>{{location.formatted_address}}</p>
                 <!-- <p>{{location.opening_hours.open_now}}</p> -->
                 <!-- <p>{{location.weekday_text}}</p> -->
                 <hr />
+        <!-- <img src="{{location.photos[1].html_attributions[0]}}"/> -->
+       
         </section>
-
+<img src=""/>
         <p id="clearList"></p>
 
 </div>
