@@ -1,12 +1,17 @@
+// below line pulls a file from the node_moldules location called 'express'
 var express = require('express');
+// below line pulls a file from the node_moldules location called 'body-parser'
 var bodyParser = require('body-parser');
+// below line pulls a file from the node_moldules location called 'request'
 var request = require('request');
+// 'express server' way to create the 'express' server
 var app = express();
+// using server on port 8080
 var port = 8080;
 
 
 app.use(bodyParser.json({ type: 'application/*+json' }));
-
+// get static files and place in 'public' folder under root directory '__dirname' is the root directory
 app.use(express.static(`${__dirname}/public`));
 
 app.get('/', function(req, res){
