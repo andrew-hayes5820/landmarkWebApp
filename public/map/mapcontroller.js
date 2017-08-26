@@ -23,7 +23,7 @@ app.controller('MapController', function($scope, $timeout, $location, $routePara
     $scope.savePlace = function(place){
         PlacesFactory.saveSelectedPlace(place);
         $timeout(function(){$location.path('/directions')});
-    }
+    
     };
 
     MapService.init(mapLat, mapLng);  // This creates the map and centers it on the selected location.
