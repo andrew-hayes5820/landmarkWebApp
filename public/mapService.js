@@ -2,10 +2,10 @@ var app = angular.module('landmarkModule');
 
 app.service('MapService', function($q) {
     
-    this.init = function() {
+    this.init = function(mapLat, mapLng) {
         var options = {
-            center: new google.maps.LatLng(40.7127837, -74.00594130000002),
-            zoom: 13,
+            center: new google.maps.LatLng(mapLat, mapLng),
+            zoom: 8,
             disableDefaultUI: true    
         }
         this.map = new google.maps.Map(
