@@ -7,8 +7,9 @@ app.factory('APIFactory', function($http){
 	var locationData;
 	// var apiPlacesKey = "AIzaSyAQhESmOdlt_4NxVRerzsGt5hlN8DHBJIg";
 
-	var apiPlacesKey =  "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
+	var apiPlacesKey =  "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw";
 	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
+	// AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So
 
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
 
@@ -57,7 +58,7 @@ app.factory('APIFactory', function($http){
 	}
 
 	function getPhotos(photoReference){
-		return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=300&photoreference=${photoReference}&key=${apiPlacesKey}`;
+		return `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=${photoReference}&key=${apiPlacesKey}`;
 	}
 
 function userLocation(location){

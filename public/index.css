@@ -65,7 +65,7 @@ section {
  margin: 10px;
 }
 .mapBackground{
-    background-image:url("images/mapPage(2).jpg");
+    background-image:url("images/mapPage(2).png");
     background-size: 100%;
     background-repeat: no-repeat;
     position: fixed;
@@ -124,4 +124,21 @@ hr{
     padding: 0;
     height:50px;
     width:auto;
+    font-size: 16px;
+    height: 63px;
+    text-align: left;
+}
+.directionsPage{
+    align-content: center;
+    width: 95%;
+}
+.directionList{
+    float:left;
+    width: 50%;
+    font-size: 20px;
+    margin-left:75px;
     }
+.placeImage{
+    float:left;
+    padding-left: 75px;
+}
