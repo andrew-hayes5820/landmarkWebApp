@@ -24,3 +24,4 @@ app.service('MapService', function($q) {
         // this.map.setCenter(coords);  // resets center of map
     }
 });
+

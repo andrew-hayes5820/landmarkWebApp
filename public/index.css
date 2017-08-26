@@ -103,13 +103,18 @@ p{
 #locationMap{
     float:left;
     padding-right:10%;
+    height: 500px;
+    width: 500px;
+    border-radius: 7px;
+    border: 1px solid silver;
+    margin: 40px;
     }
 #resultList{
     font-size: 16px;
     height: 65px;
     margin: auto;
     text-align: left;
-    }
+     }
 #locationIcon{
     float:left;
     margin: 0;
