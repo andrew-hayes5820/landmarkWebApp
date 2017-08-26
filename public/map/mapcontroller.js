@@ -15,9 +15,14 @@ app.controller('MapController', function($scope, $timeout, $location, $routePara
              $timeout($scope.locationData = result);
     });
 
+    $scope.addMarker = function(coords){   //  This is a callback function to set markers.
+        MapService.addMarker(coords);
+    };
+
     $scope.selectPlace = function(place){
         PlacesFactory.saveSelectedPlace(place);
         $timeout($location.path('/directions'));
-    }
-MapService.init(mapLat, mapLng);  // This creates the map and centers it on the selected location.
+    };
+
+    MapService.init(mapLat, mapLng);  // This creates the map and centers it on the selected location.
 });

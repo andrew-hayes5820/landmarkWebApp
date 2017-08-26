@@ -9,7 +9,7 @@
 <div id="mapPage">
         <div id="locationMap">
          </div>
-        <section id="resultList" ng-repeat = 'location in locationData | limitTo: 8' ng-click='selectPlace(location)'>
+        <section id="resultList" ng-repeat='location in locationData | limitTo: 8' ng-click='selectPlace(location)' ng-init="addMarker(location.geometry.location)">
                 <!-- <img id="locationIcon" src = '{{location.icon}}'/> -->
                 <p><strong>{{location.name}}</strong></p>
                 <p>{{location.formatted_phone_number}}</p>
