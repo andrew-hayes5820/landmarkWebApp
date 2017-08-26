@@ -17,18 +17,23 @@ app.factory('LocationFactory', function(APIFactory){
         }
     }
 
-    function getGeoLocation(type){
+    function getGeoLocation(){
         APIFactory.clearLocationData();
 
+        
         return new Promise(function(resolve, reject){  // This function has to be called twice to work.  Why?
+            
             function success(position) {
                 latitude  = position.coords.latitude;
                 longitude = position.coords.longitude;
+                console.log(latitude, longitude);
                 resolve({ latitude, longitude });
             }
+
             function error() {
                 reject({error: 'Geo Location Service Currently Unavailable' });
             }
+
             navigator.geolocation.getCurrentPosition(success, error);
 
         });
