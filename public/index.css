@@ -93,7 +93,7 @@ p{
     }
 #mapPage{
     margin: auto;
-    padding-left: 7.5%;
+    padding-left: 2.5%;
     padding-right:7.5%;
 }
 #otherPageLogo{
@@ -102,19 +102,22 @@ p{
 }
 #locationMap{
     float:left;
-    padding-right:10%;
+    padding-right:15%;
     height: 500px;
-    width: 500px;
+    width: 450px;
     border-radius: 7px;
     border: 1px solid silver;
-    margin: 40px;
+    margin-right: 40px;
     }
 #resultList{
     font-size: 16px;
-    height: 65px;
+    height: 63px;
     margin: auto;
     text-align: left;
      }
+hr{
+    margin: 0;
+}
 #locationIcon{
     float:left;
     margin: 0;
