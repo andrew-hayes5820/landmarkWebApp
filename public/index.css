@@ -24,6 +24,7 @@ margin: auto;
 background-color: #DDEDFA;
 box-shadow: -10px 10px 10px #DDEDFA;
 display: inline-block;
+opacity: 0.6;
 }
 #paragraphMainPage{
 width: 445px;
@@ -86,7 +87,7 @@ section {
     width: 500px;
     border-radius: 5px;
     font-size: 24pt;
-    text-align: center;
+    text-align: left;
     border: solid 3px #F26522;
     padding: 2px;
  }
