@@ -15,8 +15,8 @@ app.controller('MapController', function($scope, $timeout, $location, $routePara
              $timeout($scope.locationData = result);
     });
 
-    $scope.addMarker = function(coords){   //  This is a callback function to set markers.
-        MapService.addMarker(coords);
+    $scope.addMarker = function(coords, name){   //  This is a callback function to set markers.
+        MapService.addMarker(coords, name);
     };
 
 

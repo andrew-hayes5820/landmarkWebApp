@@ -9,13 +9,6 @@ app.factory('APIFactory', function($http){
 	var apiPlacesKey = "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw"
 	// var apiPlacesKey =  "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
 
-<<<<<<< HEAD
-	var apiPlacesKey =  "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw";
-	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
-	// AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So
-=======
->>>>>>> 32f45dd82a1fb8b210574d7f815bff0a8a4a3b73
-
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
 
 	return {
