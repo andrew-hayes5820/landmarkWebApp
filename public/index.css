@@ -23,6 +23,7 @@ width: 15%;
 margin: auto;
 background-color: #DDEDFA;
 box-shadow: -10px 10px 10px #DDEDFA;
+display: inline-block;
 }
 #paragraphMainPage{
 width: 445px;
