@@ -7,7 +7,7 @@ var request = require('request');
 // 'express server' way to create the 'express' server
 var app = express();
 // using server on port 8080
-var port = 8080;
+var port = process.env.PORT || 8080;
 
 
 app.use(bodyParser.json({ type: 'application/*+json' }));
@@ -15,7 +15,7 @@ app.use(bodyParser.json({ type: 'application/*+json' }));
 app.use(express.static(`${__dirname}/public`));
 
 app.get('/', function(req, res){
-	res.sendFile(`${__dirname}/public/index.html`);
+	res.sendFile(`${__dirname}/public/index.html`);  // If it does not work on heroku, use res.render("index"); or maybe the same past used here
 });
 
 //proxy for google places
