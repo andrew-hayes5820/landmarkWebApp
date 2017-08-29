@@ -15,6 +15,7 @@ body{
     max-width: 100%;
     max-height: 100%;
     margin: auto;
+    /* The overflow property specifies what happens if content overflows an element's box. */
     overflow: auto;
 }
 .radialSelection{
@@ -67,6 +68,14 @@ section {
  padding: 10px 17px;
  border-style: none;
  margin: 10px;
+}
+.locationButton:Hover{
+    font-size: 24pt;
+    border-radius: 10px;
+    background-color: #FF5000;
+    padding: 10px 17px;
+    border-style: none;
+    margin: 10px;
 }
 .mapBackground{
     background-image:url("images/mapPage(2).png");
