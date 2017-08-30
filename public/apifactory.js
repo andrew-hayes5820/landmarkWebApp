@@ -41,7 +41,7 @@ app.factory('APIFactory', function($http){
 				result.data.results.forEach(function(item){
 					promises.push(getDetails(item.place_id));
 				});
-
+				promises = promises.slice(0, 8);
 				return Promise.all(promises);
 			}).then(function(data){
 				console.log(data);
