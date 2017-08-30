@@ -3,10 +3,6 @@ body{
     margin-right: auto;
     text-align: center;
 }
-h3 {
-    text-align: left;
-    margin-left: 10%;
-}
 .generalWallpaper{
     background-image:url("images/backgroundMK2.jpg");
     background-size: 100%;
@@ -149,7 +145,7 @@ hr{
     margin: 0;
 }
 .blue {
-    color: #4285F4;
+    color: #0079BF;
 }
 .green {
     color: #34A853;
@@ -174,18 +170,39 @@ hr{
     padding: 5px;
 }
 .directionList{
-    float:left;
+    float:right;
     width: 50%;
     font-size: 20px;
-    margin-left:75px;
     text-align: left;
     background-color: #ACC7DF;
     padding: 15px;
+    margin: auto;
+    margin-right: 75px;
+    box-shadow: 0 0 10px 1px grey;
     }
-.placeImage{
+.placeImageSpan{
     float:left;
     padding-left: 75px;
+    margin: auto;
+    margin-right: 75px;
+    
 }
+.placeImage{
+    box-shadow: 5px 5px 10px 0px grey;
+}
+.POIChosen{
+    float:right;
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+    color:white;
+    background-color:#0079BF;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-right: 75px;
+    box-shadow: 0 0 10px 1px grey;
+    }
 @media screen and (max-width: 899px) and (min-width: 641px){
     a.navLink{
         font-size: 24px;
