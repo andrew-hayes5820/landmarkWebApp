@@ -2,7 +2,7 @@ var app = angular.module('landmarkModule');
 
 app.factory('PlacesFactory', function(APIFactory){
     var selectedPlace;
-   
+
 	return {
         saveSelectedPlace,
         getSelectedPlace,
@@ -19,6 +19,6 @@ app.factory('PlacesFactory', function(APIFactory){
         
     }
 
-	
-	
-}); 
+
+
+});

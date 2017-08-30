@@ -1,11 +1,11 @@
 var app = angular.module('landmarkModule');
 
 
-app.controller('MapController', function($scope, $timeout, $location, $routeParams, APIFactory, LocationFactory, MapService, PlacesFactory){
+app.controller('MapController', function($scope, $timeout, $location, $routeParams, $interpolate, APIFactory, LocationFactory, PlacesFactory, MapService){
     var location = $routeParams.location;
     var type = $routeParams.type;
     var mapCoordsArray = location.split(',');
-    var mapLat = parseFloat(mapCoordsArray[0]);  //  These are needed to turn the latitude and longitude from  
+    var mapLat = parseFloat(mapCoordsArray[0]);  //  These are needed to turn the latitude and longitude from
     var mapLng = parseFloat(mapCoordsArray[1]);  //  strings to a numbers.
 
 
@@ -22,8 +22,15 @@ app.controller('MapController', function($scope, $timeout, $location, $routePara
 
     $scope.savePlace = function(place){
         PlacesFactory.saveSelectedPlace(place);
-        $timeout(function(){$location.path('/directions')});
-    
+
+        $scope.origin = location;
+        var lat = place.geometry.location.lat;
+        var lng = place.geometry.location.lng;
+        $scope.destination = `${lat},${lng}`;
+        var url = $interpolate('/directions/{{origin}}/{{destination}}')($scope);
+        $timeout(function(){
+          $location.path(url);
+        });
     };
 
     MapService.init(mapLat, mapLng);  // This creates the map and centers it on the selected location.
