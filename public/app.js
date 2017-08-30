@@ -1,5 +1,5 @@
 
-var app = angular.module('landmarkModule', ['ngRoute']);
+var app = angular.module('landmarkModule', ['ngRoute', 'ngSanitize']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -12,7 +12,7 @@ app.config(function($routeProvider, $locationProvider) {
        templateUrl: 'map/map.html',
        controller: 'MapController',
     })
-    .when('/directions',{
+    .when('/directions/:origin/:destination',{
        templateUrl: 'directions/directions.html',
        controller: 'DirectionsController',
     })

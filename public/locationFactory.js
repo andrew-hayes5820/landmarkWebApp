@@ -22,8 +22,8 @@ app.factory('LocationFactory', function(APIFactory){
 
         return new Promise(function(resolve, reject){  // This function has to be called twice to work.  Why?
             function success(position) {
-                latitude  = position.coords.latitude;
-                longitude = position.coords.longitude;
+               latitude  = position.coords.latitude;
+               longitude = position.coords.longitude;
                 resolve({ latitude, longitude });
             }
             function error() {

@@ -10,14 +10,17 @@ app.factory('APIFactory', function($http){
 	//Drew's key "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
 	// old key = 'AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw'
 
-	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc"
+	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc";
+	var apiDirectionsKey = 'AIzaSyDnFeeIXnI2nKUwYyERQq9ZYY0oZ70NYbM';
 
 	return {
 		getLocationData: getLocationData,
 		userLocation: userLocation,
 		clearLocationData: clearLocationData,
 		userLocation: userLocation,
-		getPhotos: getPhotos
+		getPhotos: getPhotos,
+		locationData : locationData,
+		getLocationDirections : getLocationDirections
 	}
 
 	function getLocationData(location, type){
@@ -81,4 +84,9 @@ function clearLocationData(){
 	locationData = null;
 }
 
+
+function getLocationDirections(origin, destination){
+	return  $http.get(`api-directions?origin=${origin}&destination=${destination}&mode=driving&units=imperial&key=${apiDirectionsKey}`
+);
+}
 });
