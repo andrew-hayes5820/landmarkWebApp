@@ -155,3 +155,126 @@ hr{
     float:left;
     padding-left: 75px;
 }
+@media screen and (max-width: 899px) and (min-width: 641px){
+    a.navLink{
+        font-size: 24px;
+        text-align: center;
+        padding-right: 10px;
+    }
+    a.active{
+        font-size: 24px;
+        text-align: center;
+        padding-right: 10px;
+        color:#149186;
+    }
+    .generalWallpaper{
+        background-image:url("images/backgroundMK2.jpg"); 
+        background-size: 175% auto;
+    }
+    img#homePageLogo {
+        width:300px;
+        height:100px;
+      }
+    button.locationButton{
+        font-size: 16px;
+    }
+    form.radialSelection{
+        font-size: 16px;
+        width: 30%;
+        text-align: left;
+    }
+    input#addressInput{
+        font-size: 16px;
+        width: 300px;
+    }
+    .locationButton:Hover{
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: #FF5000;
+        border-style: none;
+        margin: 10px;}
+
+    div.mapBackground{
+        background-image:url("images/mapPage(2).png");
+        background-size: 175% auto;
+    }
+    img#otherPageLogo {
+        width:300px;
+        height:100px;
+    }
+    div#locationMap{
+        width:300px;
+        height:300px;
+        margin-left: 125px;
+    }
+    section#resultList{
+          clear: left;
+          font-size: 16px;
+    }
+}
+
+@media (max-width: 640px){
+    a.navLink{
+        font-size: 22px;
+        text-align: center;
+        padding-right: 10px;
+    }
+    a.active{
+        font-size: 22px;
+        text-align: center;
+        padding-right: 10px;
+        color:#149186;
+    }
+    .generalWallpaper{
+        background: #DDEDFA;
+        background-image:none;
+    }
+    img#homePageLogo {
+        width:200px;
+        height:60px;
+      }
+    button.locationButton{
+        font-size: 12px;
+    }
+    form.radialSelection{
+        font-size: 12px;
+        width: 20%;
+        text-align: left;
+    }
+    input#addressInput{
+        font-size: 12px;
+        width: 300px;
+    }
+    .locationButton:Hover{
+        font-size: 12px;
+        border-radius: 5px;
+        background-color: #FF5000;
+        border-style: none;
+        margin: 10px;}
+
+    div.mapBackground{
+        background: #DDEDFA;
+        background-image:none;
+    }
+    img#otherPageLogo {
+        width:200px;
+        height:60px;
+      }
+      div#locationMap{
+        width:200px;
+        height:200px;
+        margin-left: 150px;
+      }
+      section#resultList{
+          clear: left;
+          font-size: 12px;
+      }
+}
+
+
+
+/* @media (max-width: 600px){
+    
+} */
+
+
