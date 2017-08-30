@@ -23,19 +23,19 @@ h3 {
     overflow: auto;
 }
 .radialSelection{
-text-align: left;
-width: 15%;
-margin: auto;
-background-color: #DDEDFA;
-box-shadow: -10px 10px 10px #DDEDFA;
-display: inline-block;
-opacity: 0.6;
+    text-align: left;
+    width: 15%;
+    margin: auto;
+    background-color: #DDEDFA;
+    box-shadow: -10px 10px 10px #DDEDFA;
+    display: inline-block;
+    opacity: 0.6;
 }
 #paragraphMainPage{
-width: 445px;
-margin:0 auto;
-font-size:18px;
-font-style:sans-serif;
+    width: 445px;
+    margin:0 auto;
+    font-size:18px;
+    font-style:sans-serif;
 }
 .active{
     text-align: center;
@@ -60,21 +60,6 @@ font-style:sans-serif;
 #homePageLogo
 {
     height: 175px;
-}
-section {
-    font-family: sans-serif;
-}
-section#resultList {
-    margin: 5px;
-    cursor: pointer;
-
-}
-section#resultList:Hover {
-    cursor: pointer;
-    background: -webkit-linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
-    background: -o-linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
-    background: -moz-linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
-    background: linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
 }
 .locationButton{
  font-size: 24pt;
@@ -117,7 +102,6 @@ section#resultList:Hover {
     border: solid 3px #F26522;
     padding: 2px;
  }
-
 p{
     margin: 0;
     }
@@ -142,10 +126,25 @@ p{
 #resultList{
     font-size: 16px;
     height: 63px;
-    margin: auto;
+    margin: 0;
     text-align: left;
-     }
+    }
+section {
+    font-family: sans-serif;
+}
+section#resultList {
+    margin:auto;
+    cursor: pointer;
 
+}
+section#resultList:Hover {
+    cursor: pointer;
+    background: -webkit-linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
+    background: -o-linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
+    background: -moz-linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
+    background: linear-gradient(left, transparent 54%, #F26522 54%, #F26522 55%, transparent 55% );
+    margin: auto;
+}
 hr{
     margin: 0;
 }
