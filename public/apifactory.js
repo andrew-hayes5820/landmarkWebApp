@@ -5,9 +5,9 @@ var app = angular.module('landmarkModule');
 app.factory('APIFactory', function($http){
 
 	var locationData;
-	var apiPlacesKey = "AIzaSyAQhESmOdlt_4NxVRerzsGt5hlN8DHBJIg";
+	// var apiPlacesKey = "AIzaSyAQhESmOdlt_4NxVRerzsGt5hlN8DHBJIg";
 	// var apiPlacesKey = "AIzaSyDLI6aa4HIc-UGROfE6ITmgnsSO-ot9Wcw"
-	// var apiPlacesKey =  "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
+	var apiPlacesKey =  "AIzaSyAGMwnSBnRSYWnI2DEVf43Zq9nb1Zgf-So";
 
 	var apiMapsKey = "AIzaSyAxK_qHE-PqWJ9mhvcKd61y__47f7opeWc";
 	var apiDirectionsKey = 'AIzaSyDnFeeIXnI2nKUwYyERQq9ZYY0oZ70NYbM';

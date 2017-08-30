@@ -4,9 +4,12 @@ app.controller('DirectionsController', function($scope, $routeParams, $timeout, 
     $scope.place = PlacesFactory.getSelectedPlace();
     console.log($scope.place);
 
-
     var origin = $routeParams.origin;
     var destination = $routeParams.destination;
+
+	$scope.goBack = function(){
+	    window.history.back();
+    };
 
 
     APIFactory.getLocationDirections(origin, destination)

@@ -1,30 +1,25 @@
+<div class="mapBackground">
+
 <nav>
         <a class="navLink" href="#home">Home</a>
-        <a class="navLink" href="#map">Map</a>
+        <a class="navLink" ng-click="goBack()">Map</a>
         <a class="active"><strong>Directions</strong></a>
 </nav>
     <!-- <h1>Where would you like to visit first?</h1> -->
 <img id="otherPageLogo"src="../images/landmark-logo.png" alt="NO IMAGE TO LOAD">
 <br>
-<div class="directionsPage">
-    <div class = "directionList">
+  <h2>{{place.name}}</h2>
 
-    </div>
-    <br>
-    <img class = "placeImage" src="{{place.imageUrl}}">
+  <h3>Starting point: {{start}}</h3>
+  <h3>Destination: {{end}}</h3>
+  <img class="placeImage" src="{{place.imageUrl}}">
 
-</div>
-
-<<<<<<< HEAD
-<img src="{{}}" alt = "No Image to Load">
-
-=======
->>>>>>> 356cf1b884a824528567d94bfe5c24d164c1dd62
-Start <p>{{start}}</p>
-End <p>{{end}}</p>
-
+<div class="directionList">
 <section ng-repeat='location in locationDirections'>
-  <p>{{location.distance.text}}</p>
-  <p>{{location.duration.text}}</p>
   <p ng-bind-html="location.html_instructions"></p>
+  <p class="right"> <span class="blue">{{location.distance.text}} </span>
+  <span class="green"> ({{location.duration.text}})</span></p>
+  <br>
 </section>
+</div>
+</div>

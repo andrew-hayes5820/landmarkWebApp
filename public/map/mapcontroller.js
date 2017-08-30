@@ -8,7 +8,7 @@ app.controller('MapController', function($scope, $timeout, $location, $routePara
     var mapLat = parseFloat(mapCoordsArray[0]);  //  These are needed to turn the latitude and longitude from
     var mapLng = parseFloat(mapCoordsArray[1]);  //  strings to a numbers.
 
-
+   
     APIFactory.getLocationData(location, type)
         .then(function(result){
             console.log(result);
