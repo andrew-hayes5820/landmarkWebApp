@@ -20,13 +20,12 @@ app.factory('LocationFactory', function(APIFactory){
     function getGeoLocation(){
         APIFactory.clearLocationData();
 
-        
+
         return new Promise(function(resolve, reject){  // This function has to be called twice to work.  Why?
-            
+
             function success(position) {
-                latitude  = position.coords.latitude;
-                longitude = position.coords.longitude;
-                console.log(latitude, longitude);
+               latitude  = position.coords.latitude;
+               longitude = position.coords.longitude;
                 resolve({ latitude, longitude });
             }
 

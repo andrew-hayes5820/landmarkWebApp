@@ -8,9 +8,20 @@
 <br>
 <div class="directionsPage">
     <div class = "directionList">
-        
+
     </div>
     <br>
     <img class = "placeImage" src="{{place.imageUrl}}">
 
 </div>
+
+<img src="{{}}" alt = "No Image to Load">
+
+Start <p>{{start}}</p>
+End <p>{{end}}</p>
+
+<section ng-repeat='location in locationDirections'>
+  <p>{{location.distance.text}}</p>
+  <p>{{location.duration.text}}</p>
+  <p ng-bind-html="location.html_instructions"></p>
+</section>

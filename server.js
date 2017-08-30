@@ -67,7 +67,22 @@ app.get('/api-details', function(req, res){
 	});
 });
 
+app.get('/api-directions', function(req, res){
+	var baseUrl = "https://maps.googleapis.com/maps/api/directions/json"
+	var url = req.url.replace(req.path, baseUrl);
+	request(url, function(err, response, body){
+		if(err){
+			return res.json(err);
+		}
+
+		if(body) {
+			body = JSON.parse(body);
+		}
+
+		res.json(body);
+	});
+});
 
 app.listen(port, function(){
 	console.log('listening on localhost:8080');
-});
+	});
