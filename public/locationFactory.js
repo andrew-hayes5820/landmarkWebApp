@@ -21,7 +21,15 @@ app.factory('LocationFactory', function(APIFactory){
         APIFactory.clearLocationData();
 
 
-        return new Promise(function(resolve, reject){  // This function has to be called twice to work.  Why?
+        return new Promise(function(resolve, reject){  
+
+            var options = {
+                enableHighAccuracy: false,  // Do not take extra time for High accuracy.
+                timeout: 5000,  // It has 5 seconds to return coords.
+                maximumAge: 0  // Do not return a previously cached position.
+            }
+
+            navigator.geolocation.getCurrentPosition(success, error, options);
 
             function success(position) {
                latitude  = position.coords.latitude;
@@ -32,8 +40,6 @@ app.factory('LocationFactory', function(APIFactory){
             function error() {
                 reject({error: 'Geo Location Service Currently Unavailable' });
             }
-
-            navigator.geolocation.getCurrentPosition(success, error);
 
         });
 

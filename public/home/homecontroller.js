@@ -23,26 +23,29 @@ app.controller('HomeController', function($scope, $location, $interpolate, $time
 	}
 
 	$scope.getMyGeoLocation = function(){
-
-		if (!$scope.type) {
-			alert("Select a place you'd like to visit.");
-		}
 		getCurrentCoords();
 	}
 
 function getCurrentCoords() {
-			LocationFactory.getGeoLocation()
-			.then(function(){
-				$scope.location = LocationFactory.getLocationCoordinates();
-			})
-			.then(function(){
-				var url = $interpolate('/map/{{location}}/{{type}}')($scope);
-				console.log(url);
-				$timeout(function(){$location.path(url);});
-			})
-			.catch(function(err){
-				console.error(err);
-				});
+
+	if ('geolocation' in navigator){
+		LocationFactory.getGeoLocation()
+		.then(function(){
+			$scope.location = LocationFactory.getLocationCoordinates();
+		})
+		.then(function(){
+			var url = $interpolate('/map/{{location}}/{{type}}')($scope);
+			console.log(url);
+			$timeout(function(){$location.path(url);});
+		})
+		.catch(function(err){
+			console.error(err);
+			});
+	} else {
+		errorMsg = "Sorry, it looks like your browser does not support geolocation so we are unable to get your current location.";
+		outputResult(errorMsg);  // Output error message.
+	}
+
 }
 
 });
