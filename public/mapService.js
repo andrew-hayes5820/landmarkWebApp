@@ -6,7 +6,8 @@ app.service('MapService', function($q) {
         var options = {
             center: new google.maps.LatLng(mapLat, mapLng),  // This sets the center of the map
             zoom: 9,
-            disableDefaultUI: true    // this disables the man and other things normally found on google maps.
+            disableDefaultUI: true,    // this disables the man and other things normally found on google maps.
+            
         }
         this.map = new google.maps.Map(
             document.getElementById("locationMap"), options  // This creates the map

@@ -1,7 +1,22 @@
 var app = angular.module('landmarkModule');
 
 app.controller('DirectionsController', function($scope, $routeParams, $timeout, APIFactory, PlacesFactory){
-    $scope.place = PlacesFactory.getSelectedPlace();
+    
+    var photo;
+    if (localStorage.getItem("photo")) {  // The savePlace() function clears local storage.
+    	// so if you go back and select another location it clears local storage.
+    	$scope.photo = localStorage.getItem("photo");
+    	$scope.name = localStorage.getItem("name");
+    	$scope.name
+    } else {
+      	place = PlacesFactory.getSelectedPlace();
+      	photo = place.imageUrl;
+      	$scope.photo = photo;
+      	$scope.name = place.name;
+		localStorage.setItem("photo", place.imageUrl);
+		localStorage.setItem("name", place.name);
+    }
+
     console.log($scope.place);
 
     var origin = $routeParams.origin;
