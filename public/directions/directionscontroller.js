@@ -3,35 +3,20 @@ var app = angular.module('landmarkModule');
 app.controller('DirectionsController', function($scope, $routeParams, $timeout, APIFactory, PlacesFactory){
     
     var photo;
-    if (photo) {
-    	$scope.photo = photo; 
+    if (localStorage.getItem("photo")) {  // The savePlace() function clears local storage.
+    	// so if you go back and select another location it clears local storage.
+    	$scope.photo = localStorage.getItem("photo");
+    	$scope.name = localStorage.getItem("name");
+    	$scope.name
     } else {
-	      if (PlacesFactory.getSelectedPlace()) {
-		      	place = PlacesFactory.getSelectedPlace();
-		      	photo = place.imageUrl;
-		      	$scope.photo = photo;
-				localStorage.setItem("photo", place.imageUrl);
-		    } else {
-		    	photo = localStorage.getItem("photo");
-		    } 
-    	//go back to map view?  Unlikely scenario
+      	place = PlacesFactory.getSelectedPlace();
+      	photo = place.imageUrl;
+      	$scope.photo = photo;
+      	$scope.name = place.name;
+		localStorage.setItem("photo", place.imageUrl);
+		localStorage.setItem("name", place.name);
     }
 
-	// place = PlacesFactory.getSelectedPlace();
-    // } else {
-
-    // }
-    // }
-	// test = localStorage.getItem("photo");
-	// console.log(test);
-
-//     if (localStorage.getItem("place")){
-//     	place = JSON.parse(localStorage.getItem("place"));
-// 	} else {
-//     place = PlacesFactory.getSelectedPlace();
-// 	localStorage.setItem("place", place);
-// }
-	// $scope.place = place;
     console.log($scope.place);
 
     var origin = $routeParams.origin;
