@@ -1,3 +1,5 @@
+(function(angular){
+
 var app = angular.module('landmarkModule');
 
 
@@ -50,3 +52,4 @@ function getCurrentCoords() {
 }
 
 });
+})(window.angular);

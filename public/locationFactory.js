@@ -1,4 +1,5 @@
-// stores current location
+(function(angular){
+
 
 var app = angular.module('landmarkModule');
 
@@ -63,3 +64,4 @@ app.factory('LocationFactory', function(APIFactory, geolocation){
 
 
 });
+})(window.angular);
