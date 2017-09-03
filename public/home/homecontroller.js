@@ -19,6 +19,7 @@ app.controller('HomeController', function($scope, $location, $interpolate, $time
 				});
 		} else {
 			getCurrentCoords();
+			return
 		}
 	}
 

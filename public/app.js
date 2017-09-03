@@ -1,5 +1,6 @@
+(function(angular){
 
-var app = angular.module('landmarkModule', ['ngRoute', 'ngSanitize']);
+var app = angular.module('landmarkModule', ['ngRoute', 'ngSanitize', 'geolocation']);
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -25,3 +26,4 @@ app.config(function($routeProvider, $locationProvider) {
 $locationProvider.hashPrefix('');
 
 });
+})(window.angular);
