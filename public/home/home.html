@@ -2,45 +2,43 @@
 
 <img id="homePageLogo" src="images/landmark-logo.png" alt="">
 
-<p>
-    <section>
-      <form class = "radialSelection">
+  <section>
+    <form class = "radialSelection">
 
 
-          <input ng-model ="type" type="radio" name="type" value="aquarium"> Aquariums
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="museum"> Museums
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="art_gallery"> Art Galleries
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="stadium"> Stadiums
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="zoo"> Zoos
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="airport"> Airports
-      </form>
-      <form class="radialSelection">
-          <input ng-model ="type" type="radio" name="type" value="amusement_park"> Amusement Parks
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="campground"> Campgrounds
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="train_station"> Train Stations
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="casino"> Casinos
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="park"> Parks
-          <br />
-          <input ng-model ="type" type="radio" name="type" value="lodging"> Hotels
-
-
+        <input ng-model ="type" type="radio" name="type" value="aquarium"> Aquariums
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="museum"> Museums
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="art_gallery"> Art Galleries
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="stadium"> Stadiums
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="zoo"> Zoos
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="airport"> Airports
     </form>
-    <br>
-        <input ng-model="input" type="text" name="Address" placeholder="Find Landmarks near this Location"
-        id="addressInput" autofocus>
-    <button class="locationButton" ng-click="getGeoLocation()">
-            Get Landmarks
-    </button>
-    </section>
-    
-    <button class="locationButton" ng-click="getMyGeoLocation()">Get Landmarks Near Me</button>
-</p>
+    <form class="radialSelection">
+        <input ng-model ="type" type="radio" name="type" value="amusement_park"> Amusement Parks
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="campground"> Campgrounds
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="train_station"> Train Stations
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="casino"> Casinos
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="park"> Parks
+        <br />
+        <input ng-model ="type" type="radio" name="type" value="lodging"> Hotels
+
+
+  </form>
+  <br>
+      <input ng-model="input" type="text" name="Address" placeholder="Find Landmarks near this Location"
+      id="addressInput" autofocus>
+  <button class="locationButton" ng-click="getGeoLocation()">
+          Get Landmarks
+  </button>
+  </section>
+  
+  <button class="locationButton" ng-click="getMyGeoLocation()">Get Landmarks Near Me</button>

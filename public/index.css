@@ -280,24 +280,26 @@ hr{
         background: #DDEDFA;
         background-image:none;
     }
-    img#homePageLogo {
+    img#homePageLogo{
         width:200px;
         height:60px;
-      }
+    }
     button.locationButton{
-        font-size: 12px;
+        font-size: 5vw;
     }
     form.radialSelection{
-        font-size: 12px;
-        width: 20%;
+        font-size: 4vw;
+        width: 40%;
         text-align: left;
+        margin: 5px;
+        box-shadow:  0 0 0;
     }
     input#addressInput{
-        font-size: 12px;
-        width: 300px;
+        font-size: 5vw;
+        width: 90%;
     }
     .locationButton:Hover{
-        font-size: 12px;
+        font-size: 5vw;
         border-radius: 5px;
         background-color: #FF5000;
         margin: 10px;}
@@ -313,16 +315,44 @@ hr{
       div#locationMap{
         width:200px;
         height:200px;
-        margin-left: 150px;
+        margin: 20px 9px;
+        width: 80%;
       }
       section#resultList{
-          clear: left;
-          font-size: 12px;
+        clear: left;
+        font-size: 12px;
+        border-left: solid 7px #DDEDFA;
+        padding-left: 3px;
+        height: auto;
+        margin-bottom: 10px;
       }
       section#resultList:hover{
-        border-left: solid 3px #F26522;
+        border-left: solid 7px #F26522;
         background: none;
-}
+        padding-left: 3px;
+        margin-bottom: 10px;
+    }
+    hr{
+        display: none;
+    }
+    .placeImageSpan{
+        padding: 0;
+        margin: 10px auto;
+    }
+    .placeImage{
+        width: 90%;
+        height: auto;
+    }
+    .directionList{
+        width: 90%;
+        padding: 10px;
+        margin: 0 10px;
+        }
+    .POIChosen{
+        width: 90%;
+        padding: 10px;
+        margin: 0 10px;
+    }
 }
 
 
