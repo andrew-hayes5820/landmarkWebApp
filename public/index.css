@@ -264,7 +264,7 @@ hr{
 
 }
 
-@media (max-width: 640px){
+@media (max-width: 640px), (orientation: portrait){
     a.navLink{
         font-size: 22px;
         text-align: center;
