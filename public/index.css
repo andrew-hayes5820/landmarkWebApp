@@ -2,6 +2,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    background-color: #AACEE6;
 }
 .generalWallpaper{
     background-image:url("images/backgroundMK2.jpg");
@@ -180,8 +181,7 @@ hr{
 .placeImageSpan{
     float:left;
     padding-left: 3%;
-    margin-right: 3%;
-    
+    margin-right: 1%;
 }
 .placeImage{
     box-shadow: 5px 5px 10px 0px grey;
@@ -269,6 +269,8 @@ hr{
     .placeImage{
         width: 90%;
         height: auto;
+        margin-top: 20%;
+
     }
     .POIChosen{
         width: 45%;
