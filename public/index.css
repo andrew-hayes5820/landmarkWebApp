@@ -24,7 +24,7 @@ body{
     width: 20%;
     margin: auto;
     background-color: #DDEDFA;
-    box-shadow: -10px 10px 10px #DDEDFA;
+    box-shadow: 0 0 20px 15px #DDEDFA;
     display: inline-block;
     opacity: 0.6;
 }
@@ -211,19 +211,19 @@ hr{
     }
     .generalWallpaper{
         background-image:url("images/backgroundMK2.jpg"); 
-        background-size: 100% auto;
+        background-size: 140% auto;
         background-position: left top;
     }
     img#homePageLogo {
-        width:300px;
-        height:100px;
+        width:50%;
+        height:auto;
       }
     button.locationButton{
         font-size: 16px;
     }
     form.radialSelection{
-        font-size: 3vw;
-        width: 45%;
+        font-size: 20px;
+        width: 20%;
         text-align: left;
     }
     input#addressInput{
@@ -269,7 +269,7 @@ hr{
     .placeImage{
         width: 90%;
         height: auto;
-        margin-top: 20%;
+        margin-top: 40%;
 
     }
     .POIChosen{
@@ -308,25 +308,25 @@ hr{
         background-image:none;
     }
     img#homePageLogo{
-        width:200px;
-        height:60px;
+        width: 50%;
+        height: auto;
     }
     button.locationButton{
-        font-size: 5vw;
+        font-size: 20px;
     }
     form.radialSelection{
-        font-size: 4vw;
+        font-size: 20px;
         width: 45%;
         text-align: left;
         margin: 5px;
         box-shadow:  0 0 0;
     }
     input#addressInput{
-        font-size: 5vw;
+        font-size: 20px;
         width: 90%;
     }
     .locationButton:Hover{
-        font-size: 5vw;
+        font-size: 20px;
         border-radius: 5px;
         background-color: #FF5000;
         margin: 10px;}
@@ -372,14 +372,14 @@ hr{
         height: auto;
     }
     .directionList{
-        width: 90%;
+        width: 92%;
         padding: 10px;
-        margin: 0 10px;
+        margin: 0 2%;
         }
     .POIChosen{
-        width: 90%;
+        width: 92%;
         padding: 10px;
-        margin: 0 10px;
+        margin: 0 2%;
     }
 }
 
