@@ -16,10 +16,17 @@ app.service('MapService', function($q) {
 
     this.addMarker = function(coords, name) {
         // if(this.marker) this.marker.setMap(null);  // This deletes [previous markers]
+        var image = {
+            url: 'images/l-marker.png',
+            size: new google.maps.Size(20, 29),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(10, 29)
+        };
         var marker = new google.maps.Marker({
             map: this.map,
             position: coords, //  {lat: 42.3222402, lng: -83.18128769999998} = This is all that is needed for a marker to be placed
             animation: google.maps.Animation.DROP,
+            icon: image
         });
         // this.map.setCenter(coords);  // resets center of map
         var infowindow = new google.maps.InfoWindow({
